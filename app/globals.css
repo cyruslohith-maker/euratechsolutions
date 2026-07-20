@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-eura-black: #09090b;
+  --color-eura-charcoal: #18181b;
+  --color-eura-white: #ffffff;
+  --color-eura-border: #e4e4e7;
+  --color-eura-muted: #71717a;
+  --color-eura-muted-dark: #3f3f46;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #ffffff;
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background-color: #ffffff;
+    color: #09090b;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #71717a;
+  }
+}
+
+@layer utilities {
+  .grid-bg-dark {
+    background-image: linear-gradient(
+        to right,
+        rgba(228, 228, 231, 0.07) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(228, 228, 231, 0.07) 1px,
+        transparent 1px
+      );
+    background-size: 48px 48px;
+  }
+
+  .grid-bg-light {
+    background-image: linear-gradient(
+        to right,
+        rgba(9, 9, 11, 0.06) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(9, 9, 11, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .border-eura {
+    border-color: #e4e4e7;
+  }
+}
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap");

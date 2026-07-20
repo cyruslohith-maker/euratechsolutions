@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import DemoModal from "@/components/DemoModal";
@@ -15,6 +15,17 @@ export default function HomePage() {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    // Check if ?demo=true query param exists
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("demo") === "true") {
+      openModal();
+      // Clean up the URL query parameter without reloading
+      const newUrl = window.location.pathname;
+      window.history.replaceState({}, "", newUrl);
+    }
+  }, []);
 
   return (
     <>

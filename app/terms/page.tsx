@@ -64,7 +64,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <>
-      <Navbar onDemoClick={() => {}} />
+      <Navbar />
       <main id="main-content" className="min-h-screen bg-eura-black pt-24 pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}

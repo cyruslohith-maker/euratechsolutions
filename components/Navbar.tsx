@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
-  onDemoClick: () => void;
+  onDemoClick?: () => void;
 }
 
 export default function Navbar({ onDemoClick }: NavbarProps) {
@@ -19,6 +19,14 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleDemoTrigger = () => {
+    if (onDemoClick) {
+      onDemoClick();
+    } else {
+      window.location.href = "/?demo=true";
+    }
+  };
 
   const navLinks = [
     { label: "Capabilities", href: "#capabilities" },
@@ -69,7 +77,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
         <div className="hidden md:flex items-center gap-4">
           <button
             id="nav-demo-cta"
-            onClick={onDemoClick}
+            onClick={handleDemoTrigger}
             className="px-5 py-2 text-sm font-semibold bg-eura-white text-eura-black border border-eura-white hover:bg-transparent hover:text-eura-white transition-all duration-200 tracking-wide"
             aria-label="Request System Demo"
           >
@@ -113,7 +121,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
               <button
                 onClick={() => {
                   setMobileOpen(false);
-                  onDemoClick();
+                  handleDemoTrigger();
                 }}
                 className="w-full px-5 py-3 text-sm font-semibold bg-eura-white text-eura-black hover:bg-eura-border transition-colors tracking-wide"
                 aria-label="Request System Demo"

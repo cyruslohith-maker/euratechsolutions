@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eura Tech Solutions
+
+> **Intelligent Voice AI System Built for Business Operations**
+
+Custom Voice AI infrastructure that handles inbound inquiries, routes caller intent, automates calendar bookings, and syncs with your CRM in real time.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Icons | Lucide React |
+| Database | Supabase (PostgreSQL) |
+| Deployment | Vercel |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone & Install
+
+```bash
+git clone https://github.com/cyruslohith-maker/euratechsolutions.git
+cd euratechsolutions
+npm install
+```
+
+### 2. Set Up Environment Variables
+
+```bash
+cp .env.local.example .env.local
+```
+
+Open `.env.local` and fill in your Supabase credentials:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+```
+
+> Get these from [app.supabase.com](https://app.supabase.com) → Project Settings → API
+
+### 3. Set Up the Database
+
+1. Go to your Supabase project → **SQL Editor**
+2. Copy the contents of [`supabase-schema.sql`](./supabase-schema.sql)
+3. Paste and run it — this creates the `leads` table with Row Level Security
+
+### 4. Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+eura-tech/
+├── app/
+│   ├── layout.tsx          # Root layout, metadata, schema.org JSON-LD
+│   ├── page.tsx            # Landing page
+│   ├── terms/page.tsx      # Terms & Conditions (placeholder)
+│   └── privacy/page.tsx    # Privacy Policy (placeholder)
+├── components/
+│   ├── Navbar.tsx          # Sticky nav with mobile menu
+│   ├── Hero.tsx            # Hero section with CTAs
+│   ├── DemoModal.tsx       # Lead capture form → WebRTC demo
+│   ├── ImpactBar.tsx       # 3-column stats bar
+│   ├── ArchitectureGrid.tsx # System features grid
+│   ├── UseCases.tsx        # 3 operational use case cards
+│   ├── FinalCTA.tsx        # Bottom CTA section
+│   └── Footer.tsx          # Footer with legal links
+├── lib/
+│   └── supabase.ts         # Supabase client (env vars only)
+├── public/
+│   └── logo.png            # Eura logo
+├── supabase-schema.sql     # Database setup SQL
+└── .env.local.example      # Environment variable template
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Route | Description |
+|---|---|
+| `/` | Main landing page |
+| `/terms` | Terms & Conditions (placeholder — add legal content) |
+| `/privacy` | Privacy Policy (placeholder — add legal content) |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploying to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel --prod
+```
+
+Add your environment variables in the Vercel dashboard under **Project → Settings → Environment Variables**:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+---
+
+## Lead Capture Flow
+
+1. Visitor clicks **Try Live Demo**
+2. Modal opens with 6-field lead form (Name, Business, Email, Phone, Country, State)
+3. On submit → lead is saved to Supabase `leads` table
+4. Success state loads the interactive WebRTC demo player in an iframe
+5. View captured leads in your Supabase dashboard → Table Editor → `leads`
+
+---
+
+## Design System
+
+| Token | Value |
+|---|---|
+| Background (dark) | `#09090B` |
+| Charcoal accent | `#18181B` |
+| Pure white | `#FFFFFF` |
+| Border gray | `#E4E4E7` |
+| Muted text | `#71717A` |
+| Font | Inter (sans) + JetBrains Mono |
+
+---
+
+## License
+
+© 2025 Eura Tech Solutions. All rights reserved.

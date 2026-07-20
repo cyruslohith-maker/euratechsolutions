@@ -16,15 +16,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" aria-label="Eura Tech Solutions home">
-              <div className="relative h-8 w-20 mb-6">
-                <Image
-                  src="/logo.png"
-                  alt="Eura Tech Solutions"
-                  fill
-                  sizes="80px"
-                  className="object-contain object-left filter invert brightness-0 invert"
-                />
+            <Link href="/" aria-label="Eura Tech Solutions home" className="inline-block group mb-6">
+              <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-1 bg-white">
+                <div className="relative h-9 w-28 transition-transform duration-300 group-hover:scale-[1.02]">
+                  <Image
+                    src="/logo.png"
+                    alt="Eura Tech Solutions"
+                    fill
+                    sizes="112px"
+                    className="object-contain object-center"
+                  />
+                </div>
               </div>
             </Link>
             <p className="text-sm text-eura-muted leading-relaxed max-w-xs">

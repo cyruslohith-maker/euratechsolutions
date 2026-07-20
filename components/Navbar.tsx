@@ -47,16 +47,27 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0 group" aria-label="Eura Tech Solutions homepage">
-          <div className="relative h-9 w-24 transition-opacity group-hover:opacity-80">
-            <Image
-              src="/logo.png"
-              alt="Eura Tech Solutions"
-              fill
-              sizes="96px"
-              className="object-contain object-left"
-              priority
-            />
+        <Link href="/" className="flex items-center gap-3 shrink-0 group" aria-label="Eura Tech Solutions homepage">
+          <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-1 bg-white">
+            <div className="relative h-10 w-32 transition-transform duration-300 group-hover:scale-[1.02]">
+              <Image
+                src="/logo.png"
+                alt="Eura Tech Solutions"
+                fill
+                sizes="128px"
+                className="object-contain object-center"
+                priority
+              />
+            </div>
+            {/* Geometric corner highlight indicators */}
+            <div className="absolute -top-[1px] -left-[1px] w-1.5 h-1.5 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute -top-[1px] -right-[1px] w-1.5 h-1.5 border-t border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute -bottom-[1px] -left-[1px] w-1.5 h-1.5 border-b border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute -bottom-[1px] -right-[1px] w-1.5 h-1.5 border-b border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div className="hidden sm:flex flex-col font-mono text-[9px] leading-tight tracking-wider text-eura-muted uppercase">
+            <span>SYS_ID: EURA</span>
+            <span className="text-[7px] text-white animate-pulse">● ONLINE</span>
           </div>
         </Link>
 

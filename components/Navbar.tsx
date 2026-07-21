@@ -55,9 +55,10 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
                 alt="Eura Tech Solutions"
                 fill
                 sizes="112px"
-                className="object-contain object-center scale-[1.5]"
+                className="object-contain object-center scale-[1.8]"
                 priority
               />
+
             </div>
             {/* Geometric corner highlight indicators */}
             <div className="absolute -top-[1px] -left-[1px] w-2.5 h-2.5 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tl-lg" />

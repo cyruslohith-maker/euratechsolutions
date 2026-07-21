@@ -24,8 +24,9 @@ export default function Footer() {
                     alt="Eura Tech Solutions"
                     fill
                     sizes="112px"
-                    className="object-contain object-center scale-[1.5]"
+                    className="object-contain object-center scale-[1.8]"
                   />
+
                 </div>
               </div>
             </Link>

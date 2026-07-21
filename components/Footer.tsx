@@ -17,18 +17,19 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" aria-label="Eura Tech Solutions home" className="inline-block group mb-6">
-              <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-1 bg-white rounded-lg">
-                <div className="relative h-11 w-36 transition-transform duration-300 group-hover:scale-[1.02] overflow-hidden">
+              <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-0 bg-white rounded-lg overflow-hidden">
+                <div className="relative h-9 w-28 transition-transform duration-300 group-hover:scale-[1.02]">
                   <Image
                     src="/logo.png"
                     alt="Eura Tech Solutions"
                     fill
-                    sizes="144px"
-                    className="object-contain object-center scale-125"
+                    sizes="112px"
+                    className="object-contain object-center scale-[1.5]"
                   />
                 </div>
               </div>
             </Link>
+
 
             <p className="text-sm text-eura-muted leading-relaxed max-w-xs">
               Custom Voice AI infrastructure for modern business operations.

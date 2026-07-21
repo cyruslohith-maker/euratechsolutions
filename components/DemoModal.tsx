@@ -178,15 +178,20 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                     transition={{ duration: 0.4 }}
                     className="p-6"
                   >
-                    <div className="flex items-center gap-3 mb-6 p-4 border border-eura-border/30 bg-eura-black">
-                      <CheckCircle2 size={20} className="text-white shrink-0" />
-                      <div>
-                        <p className="text-sm font-semibold text-eura-white">
-                          Registration complete
-                        </p>
-                        <p className="text-xs text-eura-muted mt-0.5">
-                          Loading your interactive Voice AI demo…
-                        </p>
+                    <div className="flex flex-col gap-3 mb-6 p-4 border border-eura-border/30 bg-eura-black">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 size={20} className="text-white shrink-0" />
+                        <div>
+                          <p className="text-sm font-semibold text-eura-white">
+                            Registration complete
+                          </p>
+                          <p className="text-xs text-eura-muted mt-0.5">
+                            Loading your interactive Voice AI demo…
+                          </p>
+                        </div>
+                      </div>
+                      <div className="border-t border-eura-border/20 pt-2 text-[11px] text-eura-muted leading-relaxed">
+                        <strong className="text-white">To start the call:</strong> Click the call/start button inside the window below. If prompted by your browser, click <span className="text-white">&quot;Allow&quot;</span> to grant microphone permissions.
                       </div>
                     </div>
                     <div className="relative w-full border border-eura-border/30 bg-eura-black overflow-hidden">
@@ -204,7 +209,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                         src="https://shrey3108.github.io/dnetal-clicnic/"
                         title="Eura Tech Solutions — Interactive Voice AI Demo"
                         className="w-full h-[420px] border-0"
-                        allow="microphone; autoplay"
+                        allow="microphone; camera; autoplay; encrypted-media;"
                         loading="lazy"
                       />
                     </div>
@@ -219,6 +224,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                         Open in new tab →
                       </a>
                     </p>
+
                   </motion.div>
                 ) : (
                   <motion.form

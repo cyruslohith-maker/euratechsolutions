@@ -48,22 +48,22 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group" aria-label="Eura Tech Solutions homepage">
-          <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-1 bg-white">
-            <div className="relative h-10 w-32 transition-transform duration-300 group-hover:scale-[1.02]">
+          <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-2 bg-white rounded-lg">
+            <div className="relative h-11 w-36 transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/logo.png"
                 alt="Eura Tech Solutions"
                 fill
-                sizes="128px"
+                sizes="144px"
                 className="object-contain object-center"
                 priority
               />
             </div>
             {/* Geometric corner highlight indicators */}
-            <div className="absolute -top-[1px] -left-[1px] w-1.5 h-1.5 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute -top-[1px] -right-[1px] w-1.5 h-1.5 border-t border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute -bottom-[1px] -left-[1px] w-1.5 h-1.5 border-b border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute -bottom-[1px] -right-[1px] w-1.5 h-1.5 border-b border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute -top-[1px] -left-[1px] w-2.5 h-2.5 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tl-lg" />
+            <div className="absolute -top-[1px] -right-[1px] w-2.5 h-2.5 border-t border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tr-lg" />
+            <div className="absolute -bottom-[1px] -left-[1px] w-2.5 h-2.5 border-b border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-lg" />
+            <div className="absolute -bottom-[1px] -right-[1px] w-2.5 h-2.5 border-b border-r border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-br-lg" />
           </div>
           <div className="hidden sm:flex flex-col font-mono text-[9px] leading-tight tracking-wider text-eura-muted uppercase">
             <span>SYS_ID: EURA</span>

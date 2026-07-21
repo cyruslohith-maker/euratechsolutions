@@ -17,13 +17,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" aria-label="Eura Tech Solutions home" className="inline-block group mb-6">
-              <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-1 bg-white">
-                <div className="relative h-9 w-28 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-2 bg-white rounded-lg">
+                <div className="relative h-10 w-32 transition-transform duration-300 group-hover:scale-[1.02]">
                   <Image
                     src="/logo.png"
                     alt="Eura Tech Solutions"
                     fill
-                    sizes="112px"
+                    sizes="128px"
                     className="object-contain object-center"
                   />
                 </div>

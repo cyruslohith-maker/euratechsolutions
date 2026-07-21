@@ -49,18 +49,15 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group" aria-label="Eura Tech Solutions homepage">
           <div className="relative border border-eura-border/30 group-hover:border-eura-white transition-colors duration-300 p-0 bg-white rounded-lg overflow-hidden">
-            <div className="relative h-9 w-28 transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="relative h-9 w-22 transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/logo.png"
                 alt="Eura Tech Solutions"
                 fill
-                sizes="112px"
+                sizes="88px"
                 className="object-contain object-center scale-[2.8]"
                 priority
               />
-
-
-
             </div>
             {/* Geometric corner highlight indicators */}
             <div className="absolute -top-[1px] -left-[1px] w-2.5 h-2.5 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tl-lg" />

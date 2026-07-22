@@ -55,9 +55,10 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
                 alt="Eura Tech Solutions"
                 fill
                 sizes="88px"
-                className="object-contain object-center scale-[2.8] translate-x-[3px]"
+                className="object-contain object-center scale-[2.8] translate-x-[-2px]"
                 priority
               />
+
 
 
             </div>

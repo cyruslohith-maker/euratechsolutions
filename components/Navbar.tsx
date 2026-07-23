@@ -32,7 +32,9 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
     { label: "Capabilities", href: "#capabilities" },
     { label: "Solutions", href: "#solutions" },
     { label: "Architecture", href: "#architecture" },
+    { label: "Loss Calculator", href: "#calculator" },
   ];
+
 
   return (
     <header

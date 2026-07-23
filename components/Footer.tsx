@@ -58,7 +58,9 @@ export default function Footer() {
                   { label: "Capabilities", href: "#capabilities" },
                   { label: "Solutions", href: "#solutions" },
                   { label: "Architecture", href: "#architecture" },
+                  { label: "Loss Calculator", href: "#calculator" },
                 ].map((link) => (
+
                   <li key={link.label}>
                     <Link
                       href={link.href}

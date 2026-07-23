@@ -7,6 +7,7 @@ import DemoModal from "@/components/DemoModal";
 import ImpactBar from "@/components/ImpactBar";
 import ArchitectureGrid from "@/components/ArchitectureGrid";
 import UseCases from "@/components/UseCases";
+import RevenueCalculator from "@/components/RevenueCalculator";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -35,6 +36,7 @@ export default function HomePage() {
         <ImpactBar />
         <ArchitectureGrid />
         <UseCases />
+        <RevenueCalculator />
         <FinalCTA onDemoClick={openModal} />
       </main>
       <Footer />
@@ -42,3 +44,4 @@ export default function HomePage() {
     </>
   );
 }
+
